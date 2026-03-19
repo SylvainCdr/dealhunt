@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /api/affiliate/fetch
+Disallow: /api/affiliate/stats
+
+Sitemap: https://dealhuntify.com/sitemap.xml

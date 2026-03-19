@@ -1,0 +1,139 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.filterBtn {
+  padding: 6px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  background: #fff;
+  color: #4a5568;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterBtn:hover {
+  border-color: #667eea;
+  color: #667eea;
+}
+
+.filterBtnActive {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+}
+
+.sortRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.sortLabel {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.sortSelect {
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: #fff;
+  color: #2d3748;
+  cursor: pointer;
+}
+
+.sourceFilters {
+  display: flex;
+  gap: 6px;
+}
+
+.sourceBtn {
+  padding: 4px 12px;
+  border: none;
+  border-radius: 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+}
+
+.sourceBtn:hover {
+  opacity: 0.8;
+}
+
+.sourceBtnAll {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.sourceBtnAliexpress {
+  background: #ff4747;
+  color: #fff;
+}
+
+.sourceBtnAmazon {
+  background: #ff9900;
+  color: #000;
+}
+
+.sourceBtnEbay {
+  background: #0064d2;
+  color: #fff;
+}
+
+.sourceBtnAwin {
+  background: #2b7de9;
+  color: #fff;
+}
+
+.sourceBtnManual {
+  background: #805ad5;
+  color: #fff;
+}
+
+.sourceBtnInactive {
+  opacity: 0.4;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.pageBtn {
+  padding: 8px 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #4a5568;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pageBtn:hover:not(:disabled) {
+  background: #667eea;
+  color: #fff;
+  border-color: #667eea;
+}
+
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  font-size: 0.85rem;
+  color: #718096;
+}
