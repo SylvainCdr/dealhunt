@@ -1,8 +1,8 @@
 // pages/blog/[slug].js — Individual blog article (SSG for SEO)
 import Head from "next/head";
 import Link from "next/link";
-import Header from "../components/header/header.jsx";
-import Footer from "../components/footer/footer.jsx";
+import Header from "../../components/header/header.jsx";
+import Footer from "../../components/footer/footer.jsx";
 import { getArticleBySlug, getAllSlugs } from "../../data/articles.js";
 import styles from "./blog.module.css";
 

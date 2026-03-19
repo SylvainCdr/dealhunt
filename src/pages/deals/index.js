@@ -4,9 +4,9 @@
 import { useEffect, useState, useCallback } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Header from "../components/header/header.jsx";
-import DealGrid from "../components/dealGrid/dealGrid.jsx";
-import Filters from "../components/filters/filters.jsx";
+import Header from "../../components/header/header.jsx";
+import DealGrid from "../../components/dealGrid/dealGrid.jsx";
+import Filters from "../../components/filters/filters.jsx";
 import styles from "./deals.module.css";
 
 export default function DealsPage() {
@@ -105,7 +105,7 @@ export default function DealsPage() {
       <main className={styles.main}>
         {/* Hero */}
         <section className={styles.hero}>
-          <h1 className={styles.heroTitle}>🔥 Today's Best Deals</h1>
+          <h1 className={styles.heroTitle}>🔥 Today&apos;s Best Deals</h1>
           <p className={styles.heroSub}>
             AliExpress, Amazon & more — updated automatically every day
           </p>

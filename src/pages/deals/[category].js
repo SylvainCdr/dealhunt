@@ -2,9 +2,9 @@
 import { useEffect, useState, useCallback } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Header from "../components/header/header.jsx";
-import Footer from "../components/footer/footer.jsx";
-import DealGrid from "../components/dealGrid/dealGrid.jsx";
+import Header from "../../components/header/header.jsx";
+import Footer from "../../components/footer/footer.jsx";
+import DealGrid from "../../components/dealGrid/dealGrid.jsx";
 import styles from "./deals.module.css";
 
 const CATEGORY_META = {

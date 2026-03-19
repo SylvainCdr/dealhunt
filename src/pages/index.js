@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Header from "./components/header/header.jsx";
-import Footer from "./components/footer/footer.jsx";
-import DealGrid from "./components/dealGrid/dealGrid.jsx";
-import Newsletter from "./components/newsletter/newsletter.jsx";
+import Header from "../components/header/header.jsx";
+import Footer from "../components/footer/footer.jsx";
+import DealGrid from "../components/dealGrid/dealGrid.jsx";
+import Newsletter from "../components/newsletter/newsletter.jsx";
 import styles from "./home.module.css";
 
 const CATEGORIES = [

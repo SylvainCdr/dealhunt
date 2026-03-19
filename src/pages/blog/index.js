@@ -1,8 +1,8 @@
 // pages/blog/index.js — Blog listing page (SEO hub)
 import Head from "next/head";
 import Link from "next/link";
-import Header from "../components/header/header.jsx";
-import Footer from "../components/footer/footer.jsx";
+import Header from "../../components/header/header.jsx";
+import Footer from "../../components/footer/footer.jsx";
 import { getAllArticles } from "../../data/articles.js";
 import styles from "./blog.module.css";
 
