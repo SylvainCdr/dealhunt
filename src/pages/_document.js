@@ -9,14 +9,17 @@ export default function Document() {
           content="71X_2vH96Y0O1sM5q7knyNigPPEsSSim7sxm7vMCQzU"
         />
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDNM3TML2S"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-2XQHVCHMZE"
+        ></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-MDNM3TML2S');
+              gtag('config', 'G-2XQHVCHMZE');
             `,
           }}
         />

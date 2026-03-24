@@ -10,6 +10,7 @@ import {
 } from "../../../utils/aliexpress.js";
 import { searchAmazonProducts } from "../../../utils/amazon.js";
 import { searchEbayProducts } from "../../../utils/ebay.js";
+import { fetchAwinFeed, parseAwinProducts } from "../../../utils/awin.js";
 
 // Categories/keywords to fetch automatically — US market
 const SEARCH_QUERIES = [
@@ -96,6 +97,7 @@ export default async function handler(req, res) {
     aliexpress: { inserted: 0, updated: 0 },
     amazon: { inserted: 0, updated: 0 },
     ebay: { inserted: 0, updated: 0 },
+    awin: { inserted: 0, updated: 0 },
   };
 
   // 1. Fetch AliExpress hot products (multiple pages)
@@ -173,7 +175,20 @@ export default async function handler(req, res) {
     }
   }
 
-  // 3. Remove deals older than 7 days that haven't been updated
+  // 3. Fetch Awin product feed (if configured)
+  try {
+    const awinRaw = await fetchAwinFeed({});
+    const awinProducts = parseAwinProducts(awinRaw);
+    if (awinProducts.length > 0) {
+      const r = await upsertDeals(awinProducts);
+      results.awin.inserted += r.inserted;
+      results.awin.updated += r.updated;
+    }
+  } catch (err) {
+    console.error("Awin fetch error:", err.message);
+  }
+
+  // 4. Remove deals older than 7 days that haven't been updated
   const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
   const removed = await Deal.deleteMany({
     updatedAt: { $lt: sevenDaysAgo },

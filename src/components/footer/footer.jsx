@@ -65,6 +65,7 @@ export default function Footer() {
             <li>
               <Link href="/disclaimer">Disclaimer</Link>
             </li>
+            <p> ePN</p>
           </ul>
         </div>
       </div>
